@@ -4,3 +4,13 @@ build/
 local.properties
 *.iml
 .kotlin/
+
+# Linux / pesquisa: nunca versionar binários proprietários, APKs ou código decompilado
+linux/vendor/
+linux/venv/
+*.apk
+*.xapk
+*.so
+**/jadx-out/
+__pycache__/
+*.par

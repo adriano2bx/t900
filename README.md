@@ -16,3 +16,15 @@ Perfis padrão (FC `2A37`) são decodificados no log. Requisitos: Android 8.0+ c
 ## Estado
 
 Ainda **não compilado/testado em aparelho** (o ambiente de desenvolvimento não alcança o Google Maven); a compilação e o `HexTest` rodam no CI. Se o T900 não aparecer na varredura LE ou expuser pouco, o controle provavelmente passa por Bluetooth clássico.
+
+## Linux (protocolo LaxasFit) — `linux/`
+
+O protocolo foi mapeado: o T900 Ultra usa o protocolo do app **LaxasFit** (quadros `DF…`
+no serviço `6e400001-…-dcca9f`). Do Linux já é possível enviar **notificações com
+acentos e ícones**, **vibrar** ("procurar relógio"), ler bateria e **tocar áudio** no
+alto-falante do relógio (A2DP), além de um app desktop mínimo para mandar mensagens.
+
+- Protocolo completo, comandos confirmados e armadilhas: [`docs/PROTOCOLO.md`](docs/PROTOCOLO.md)
+- Ferramentas e uso: [`linux/README.md`](linux/README.md)
+
+> ⚠️ O grupo `0x13` é OTA de firmware — `0x13/02` trava o relógio em modo de atualização.
